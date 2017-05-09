@@ -1,0 +1,21 @@
+<html>
+    <head>
+        {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{% static "stats/js/bootstrap.min.js" %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static "stats/css/bootstrap.min.css" %}">
+        <link rel="stylesheet" type="text/css" href="{% static "stats/style.css" %}">
+    </head>
+    {% block body %}
+    <body>
+        <!-- main jumbotron -->
+        <div class="container">
+            <div class="jumbotron">
+                <div class="intro text-center">
+                    <h1 class="welcome" style="color : teal; font-family: cursive;">Welcome to the Reception Desk</h1>
+                </div>
+            </div>
+        </div>  
+    </body>
+    {% endblock %}
+
+</html>
