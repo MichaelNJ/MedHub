@@ -5,17 +5,53 @@
         <link rel="stylesheet" type="text/css" href="{% static "stats/css/bootstrap.min.css" %}">
         <link rel="stylesheet" type="text/css" href="{% static "stats/style.css" %}">
     </head>
-    {% block body %}
+    
     <body>
+        <!-- The nav bar -->
+        <div class="navbar navbar-default navbar-fixed-top" style="font-size: 15px; font-family: cursive;" >
+            <div class="container-fluid">
+                <!--The header name-->
+                <div class="navbar-header" >
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topnav">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">&nbsp;MedHub</a>
+                </div>
+
+                <!-- the content -->
+                <div class="collapse-navbar-collapse" id="#topnav">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="{% url 'Doctor:index' %}">&nbsp;Patient Treatment</a> 
+                        </li>
+                    </ul>
+
+                    <!--The other links -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="">&nbsp;Contact Support</a>
+                        </li>
+                        <li>
+                            <a href="">&nbsp;Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
         <!-- main jumbotron -->
         <div class="container">
-            <div class="jumbotron">
+            <div class="jumbotron" style="background-color: white;">
                 <div class="intro text-center">
-                    <h1 class="welcome" style="color: lightseagreen; font-family: cursive;">Welcome to the Doctors Desk</h1>
+                    <h1 class="welcome" style="color: lightseagreen; font-family: cursive;">The Doctors Desk</h1>
                 </div>
             </div>
         </div>  
+    {% block body %}
+    {% endblock %}             
     </body>
-    {% endblock %}
+    
 
 </html>

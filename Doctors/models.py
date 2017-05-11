@@ -10,6 +10,6 @@ class Doctor(models.Model):
 
     doctor_age = models.IntegerField(max_length=2)
     doctor_id = models.IntegerField(max_length=8)
-
+    
     def __str__(self):
         return "%s %s" %(self.doctor_fname, self.doctor_mname)

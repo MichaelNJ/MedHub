@@ -1,0 +1,78 @@
+ {% include "doctors/base.html" %}
+ {% block body %}
+ <div class="container-fluid" style="padding-bottom: 100px; margin-bottom: 200px;">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="list-group">
+                            <a href="#" class="list-group-item ">
+                                <h4 class="list-group-item-heading">Patient Waiting List</h4>
+                            </a>
+                            <a href="#" class="list-group-item active">Patient Michael kamau</a>
+                            <a href="#" class="list-group-item">Patient Racheal Njoroge</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-default ">
+                        <div class="panel-heading">
+                            Patient Histroy
+                        </div>
+                        <div class="panel-body">
+                            Patient 001 History
+                        </div>
+                    </div>
+                    <form class="form-horizontal">
+
+                        <div class="form-group">
+                            <fieldset>
+                                    <legend>Misc Information</legend>
+                            <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="fname">Patient Height</label>
+                                                    <div class="help-block">Patient measured Height</div>
+                                                    <input class="form-control input-md" id="fname">
+                                                </div>
+
+                                            </div>
+                                            <div class="col-sm-4">
+
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="fname">Patient weight</label>
+                                                    <div class="help-block">Patient measured weight</div>
+                                                    <input class="form-control input-md" id="fname">
+                                                </div>
+                                            </div>
+                                </div>
+                            </div>
+                            </fieldset>
+                        </div>
+
+                        <div class="form-group">
+                            <fieldset>
+                                <legend>Notes on Patient</legend>
+                                <label for="data">Sickness</label>
+                                <div class="help-block">Notes on  patient ailments and sickness</div>
+                                <textarea class="form-control" id="sick"rows="5"></textarea>
+                            </fieldset>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="data">Prescription</label>
+                            <div class="help-block">Prefered Prescription</div>
+                            <textarea class="form-control" id="sick" rows="5" cols="5"></textarea>
+                        </div>
+                        <button class="btn pull-right">Genrerate Medical Report</button>
+
+
+                    </form>
+                </div>
+                <div class="col-md-3">
+
+                </div>
+            </div>
+
+        </div>
+     {% endblock %}

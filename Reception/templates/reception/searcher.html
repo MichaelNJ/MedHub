@@ -1,0 +1,25 @@
+{% include "reception/base.html" %}
+
+{% block body %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4">
+            <form action="{% url 'Reception:add' %}">
+                <div class="form-group">
+                    <label for="searcher">Patient ID Number</label>
+                    <span class="help-block">The Patients National ID Number</span>
+                    <input class="form-control input-lg" type="text" id="searcher">
+                </div>
+                <button class="btn pull-right" type="submit">Search</button>
+            </form>
+        </div>
+        <div class="col-md-4">
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,9 +1,9 @@
 from django.conf.urls import url
 from . import views
 
-app_name = "Reception"
+app_name = "Doctor"
 
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
-    
+    url(r'^$', views.waiting, name='index'), 
+    url(r'^waiting/$', views.index, name='waiting'),   
 ]

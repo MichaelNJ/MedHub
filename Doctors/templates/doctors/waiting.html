@@ -1,0 +1,30 @@
+ {% include "doctors/base.html" %}
+
+{% block body %}
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-md-4">
+
+        </div>
+
+        <div class="col-md-4">
+            <div class="list-group">
+
+                <a href="#" class="list-group-item ">
+                    <h4 class="list-group-item-heading">Patient Waiting List</h4>
+                </a>
+                <a href="{% url 'Doctor:waiting' %}" class="list-group-item">Patient Michael kamau</a>
+                <a href="{% url 'Doctor:waiting' %}" class="list-group-item">Patient Racheal Njoroge</a>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock %}

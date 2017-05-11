@@ -1,21 +1,67 @@
 <html>
     <head>
         {% load staticfiles %}
+        <title>{% block title %}Reception Desk{% endblock %}</title>
         <link rel="stylesheet" type="text/css" href="{% static "stats/js/bootstrap.min.js" %}"/>
         <link rel="stylesheet" type="text/css" href="{% static "stats/css/bootstrap.min.css" %}">
         <link rel="stylesheet" type="text/css" href="{% static "stats/style.css" %}">
     </head>
-    {% block body %}
+    
     <body>
+        <div class="navbar navbar-default navbar-fixed-top" style="font-size: 15px; font-family: cursive;" >
+            <div class="container-fluid">
+                <!--The header name-->
+                <div class="navbar-header" >
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topnav">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">&nbsp;MedHub</a>
+                </div>
+
+                <!-- the content -->
+                <div class="collapse-navbar-collapse" id="#topnav">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="{% url 'Reception:index' %}">&nbsp;Admit</a> 
+                        </li>
+                        <li>
+                            <a href="{% url 'Reception:add' %}">&nbsp;Add New Patient</a> 
+                        </li>
+
+                    </ul>
+
+                    <!--The other links -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="">&nbsp;Contact Support</a>
+                        </li>
+                        <li>
+                            <a href="">&nbsp;Logout</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
         <!-- main jumbotron -->
         <div class="container">
             <div class="jumbotron">
                 <div class="intro text-center">
-                    <h1 class="welcome" style="color : teal; font-family: cursive;">Welcome to the Reception Desk</h1>
+                    <h1 class="welcome" style="color : teal; font-family: cursive;">{% block jumbo %}The Reception Desk{% endblock %}</h1>
                 </div>
             </div>
-        </div>  
-    </body>
+        </div> 
+
+        <!-- The Navbar -->
+    {% block body %}
     {% endblock %}
+    </body>
+
 
 </html>

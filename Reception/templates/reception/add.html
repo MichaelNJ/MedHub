@@ -1,0 +1,75 @@
+{% include "reception/base.html" %}
+
+{% block body %}
+
+
+<div  class="container-fluid" style="margin-bottom: 200px;">
+    <div class="row">
+        <div class="col-md-4">
+
+        </div>
+
+        <div class="col-md-4">
+            
+            <form action="{% url 'Reception:index' %}" method="POST" class="form-horizontal">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="fname">Patient First Name</label>
+                    <div class="help-block"></div>
+                    <input class="form-control input-lg" id="fname">
+                </div>
+
+                <div class="form-group">
+                    <label for="sname">Patient Surname Name</label>
+                    <div class="help-block"></div>
+                    <input class="form-control input-lg" id="sname">
+                </div>
+
+                <div class="form-group">
+                    <label for="sname">Patient ID Number</label>
+                    <div class="help-block">Patient National ID Number</div>
+                    <input class="form-control input-lg" id="sname">
+                </div>
+
+                <div class="form-group">
+                    <label for="sname">Patient Email</label>
+                    <div class="help-block"></div>
+                    <input class="form-control input-lg" id="sname">
+                </div>
+
+                <div class="form-group">
+                    <label for="yselect">Patient Year of Studty</label>
+                    <select class="form-control" id="yselect">
+                        <option>Y4S2</option>
+                        <option>Y4S1</option>
+                        <option>Y3S2</option>
+                        <option>Y3S1</option>
+                        <option>Y2S2</option>
+                        <option>Y2S1</option>
+                        <option>Y1S2</option>
+                        <option>Y1S2</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="gselect">Patient Gender</label>
+                    <select class="form-control" id="gselect">
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </div>
+
+                <button class="btn pull-right">Add Patient</button>
+                    
+
+                
+
+            </form>
+        </div>
+
+        <div class="col-md-4">
+            
+        </div>
+    </div>
+</div>
+{% endblock %}
